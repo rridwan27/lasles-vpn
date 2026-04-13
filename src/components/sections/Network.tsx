@@ -15,7 +15,7 @@ const Network = () => {
             See LaslesVPN everywhere to make it easier for you when you move
             locations.
           </p>
-          <div className="bg-[#F8F8F8] dark:bg-gray-800 w-full p-40">
+          <div className="bg-[#F8F8F8] dark:bg-gray-800 w-full p-6 md:p-16 lg:p-24 rounded-2xl">
             <Image
               src="/HugeGlobal.svg"
               alt="Network"
