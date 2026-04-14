@@ -1,18 +1,10 @@
-interface ButtonProps {
-  children: React.ReactNode;
-  variant?: "primary" | "outline";
-  onClick?: () => void;
-  className?: string;
-  type?: "button" | "submit" | "reset";
-}
-
 export default function Button({
   children,
   variant = "primary",
   onClick,
   className = "",
   type = "button",
-}: ButtonProps) {
+}) {
   const base = "px-8 py-3 rounded-full font-semibold transition-all duration-200 cursor-pointer";
 
   const variants = {

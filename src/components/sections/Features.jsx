@@ -2,7 +2,7 @@ import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 import SectionTitle from "@/components/ui/SectionTitle";
 
-const FEATURES: string[] = [
+const FEATURES = [
   "Powerfull online protection.",
   "Internet without borders.",
   "Supercharged VPN",

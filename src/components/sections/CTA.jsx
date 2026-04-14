@@ -9,7 +9,7 @@ export default function CTA() {
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const validate = (value: string) => {
+  const validate = (value) => {
     if (!value) return "Email is required.";
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value))
       return "Enter a valid email.";
@@ -45,7 +45,7 @@ export default function CTA() {
           <div className="flex flex-col gap-2 w-full md:w-auto">
             {success ? (
               <p className="text-emerald-500 font-semibold text-sm">
-                ✅ Subscribed successfully!
+                Subscribed successfully!
               </p>
             ) : (
               <div className="flex flex-col sm:flex-row gap-3">

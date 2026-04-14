@@ -7,12 +7,7 @@ import { useTheme } from "@/context/ThemeContext";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
 import Link from "next/link";
 
-interface NavLink {
-  label: string;
-  href: string;
-}
-
-const NAV_LINKS: NavLink[] = [
+const NAV_LINKS = [
   { label: "About", href: "about" },
   { label: "Features", href: "features" },
   { label: "Pricing", href: "pricing" },
@@ -21,8 +16,8 @@ const NAV_LINKS: NavLink[] = [
 ];
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const [scrolled, setScrolled] = useState<boolean>(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const activeSection = useScrollSpy(NAV_LINKS.map((l) => l.href));
 
@@ -32,7 +27,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const scrollTo = (id: string) => {
+  const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     setMenuOpen(false);
   };

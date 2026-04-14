@@ -1,10 +1,4 @@
-interface SectionTitleProps {
-  title: string;
-  subtitle?: string;
-  align?: "left" | "center";
-}
-
-export default function SectionTitle({ title, subtitle, align = "left" }: SectionTitleProps) {
+export default function SectionTitle({ title, subtitle, align = "left" }) {
   const alignment = align === "center" ? "text-center items-center" : "text-left items-start";
 
   return (

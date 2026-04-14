@@ -4,16 +4,7 @@ import { useState } from "react";
 import { Check } from "lucide-react";
 import Image from "next/image";
 
-interface Plan {
-  title: string;
-  monthlyPrice: string;
-  yearlyPrice: string;
-  period: string;
-  highlighted: boolean;
-  features: string[];
-}
-
-const PLANS: Plan[] = [
+const PLANS = [
   {
     title: "Free Plan",
     monthlyPrice: "Free",
@@ -59,8 +50,8 @@ const PLANS: Plan[] = [
 ];
 
 export default function Pricing() {
-  const [billing, setBilling] = useState<"monthly" | "yearly">("monthly");
-  const [selectedPlan, setSelectedPlan] = useState<string>("Premium Plan");
+  const [billing, setBilling] = useState("monthly");
+  const [selectedPlan, setSelectedPlan] = useState("Premium Plan");
 
   return (
     <section id="pricing" className="bg-white dark:bg-gray-900 py-20">
@@ -159,7 +150,7 @@ export default function Pricing() {
                       {price}
                     </span>
                     {plan.period && (
-                      <span className="text-sm text-gray-400">
+                      <span className="text-sm text-gray-40">
                         {plan.period}
                       </span>
                     )}

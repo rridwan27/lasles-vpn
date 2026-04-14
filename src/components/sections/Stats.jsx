@@ -1,12 +1,6 @@
 import { Users, MapPin, Server } from "lucide-react";
 
-interface Stat {
-  icon: React.ReactNode;
-  value: string;
-  label: string;
-}
-
-const STATS: Stat[] = [
+const STATS = [
   {
     icon: <Users className="w-5 h-5 text-red-500" />,
     value: "90+",

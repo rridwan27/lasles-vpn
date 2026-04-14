@@ -4,15 +4,7 @@ import { useState, useEffect } from "react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
-interface Testimonial {
-  name: string;
-  location: string;
-  rating: number;
-  quote: string;
-  avatar: string;
-}
-
-const TESTIMONIALS: Testimonial[] = [
+const TESTIMONIALS = [
   {
     name: "Viezh Robert",
     location: "Warsaw, Poland",
@@ -123,7 +115,7 @@ export default function Testimonials() {
                       height={48}
                       className="w-full h-full object-cover"
                       onError={(e) => {
-                        (e.target as HTMLImageElement).src =
+                        e.target.src =
                           `https://ui-avatars.com/api/?name=${t.name}&background=F23A3A&color=fff`;
                       }}
                     />
